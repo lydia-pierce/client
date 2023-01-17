@@ -12,5 +12,12 @@
     "dotenv": "16.0.1",
     "mocha": "10.0.0",
     "ts-node": "10.9.1"
-  }
+  },
+    "exclude": ["./tests/", "./node_modules/", "./dist/"],
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "module": "ES2015",
+        "moduleResolution": "node",
+        "target": "ES6"
+    }
 }
