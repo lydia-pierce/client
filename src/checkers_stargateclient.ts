@@ -1,5 +1,5 @@
 import { QueryClient, StargateClient, StargateClientOptions } from "@cosmjs/stargate"
-import { Tendermint34Client } from "@cosmjs/tendermint-rpc"
+import { BroadcastTxSyncResponse, Tendermint34Client } from "@cosmjs/tendermint-rpc"
 import { CheckersExtension, setupCheckersExtension } from "./modules/checkers/queries"
 
 export class CheckersStargateClient extends StargateClient {
@@ -19,4 +19,8 @@ export class CheckersStargateClient extends StargateClient {
             this.checkersQueryClient = QueryClient.withExtensions(tmClient, setupCheckersExtension)
         }
     }
+
+    // public async tmBroadcastTxSync(tx: Uint8Array): Promise<BroadcastTxSyncResponse> {
+    //     return this.forceGetTmClient().broadcastTxSync({ tx })
+    // }
 }
