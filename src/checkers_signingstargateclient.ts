@@ -77,7 +77,7 @@ export class CheckersSigningStargateClient extends SigningStargateClient {
         }
         return this.signAndBroadcast(creator, [createMsg], fee, memo)
     }
-    
+
     public async playMove(
         creator: string,
         gameIndex: string,
@@ -99,7 +99,7 @@ export class CheckersSigningStargateClient extends SigningStargateClient {
         }
         return this.signAndBroadcast(creator, [playMoveMsg], fee, memo)
     }
-    
+
     public async rejectGame(
         creator: string,
         gameIndex: string,
@@ -114,5 +114,5 @@ export class CheckersSigningStargateClient extends SigningStargateClient {
             },
         }
         return this.signAndBroadcast(creator, [rejectGameMsg], fee, memo)
-    }    
+    }
 }

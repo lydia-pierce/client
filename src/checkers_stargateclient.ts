@@ -23,5 +23,4 @@ export class CheckersStargateClient extends StargateClient {
     public async tmBroadcastTxSync(tx: Uint8Array): Promise<BroadcastTxSyncResponse> {
         return this.forceGetTmClient().broadcastTxSync({ tx })
     }
-    
 }
