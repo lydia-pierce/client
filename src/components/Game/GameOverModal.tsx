@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
+import React from "react"
+import { Link } from "react-router-dom"
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap"
 
 interface IGameOverModalProps {
-    shown: boolean;
-    winner: string;
+    shown: boolean
+    winner: string
 }
 
 const GameOverModal = (props: IGameOverModalProps) => (
@@ -27,5 +27,5 @@ const GameOverModal = (props: IGameOverModalProps) => (
             </Link>
         </ModalFooter>
     </Modal>
-);
-export default GameOverModal;
+)
+export default GameOverModal
