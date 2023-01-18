@@ -6,7 +6,7 @@ export const checkersChainId = "checkers"
 export const getCheckersChainInfo = (): ChainInfo => ({
     chainId: checkersChainId,
     chainName: checkersChainId,
-    rpc: process.env.RPC_URL,
+    rpc: process.env.RPC_URL!,
     rest: "http://0.0.0.0:1317",
     bip44: {
         coinType: 118,
