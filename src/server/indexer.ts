@@ -194,7 +194,7 @@ export const createIndexer = async () => {
     }
 
     const handleEventForfeit = async (event: StringEvent): Promise<void> => {
-        const forfeitedId: string | undefined = getAttributeValueByKey(event.attributes, "IdValue")
+        const forfeitedId: string | undefined = getAttributeValueByKey(event.attributes, "GameIndex")
         if (!forfeitedId) throw new Error(`Forfeit event missing forfeitedId`)
         const winner: string | undefined = getAttributeValueByKey(event.attributes, "Winner")
         const blackAddress: string | undefined = db.games[forfeitedId]?.blackAddress
